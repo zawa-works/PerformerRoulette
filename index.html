@@ -6,23 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="./memberRoulette.js"></script>
     <script type="text/javascript" src="./copyToClipboard.js"></script>
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-    <h1>tiget出順ルーレット</h1>
-    <div>
-        こちらは大阪お笑い支援団体Freckles(フレクルズ)が提供しているサービスです。
-        <br>tigetの出演者一覧をコピペするだけで、出演者の出順をランダムで決めることができます。
-    </div>
-    <div id="input_member">
-        <textarea name="" id="member" cols="30" rows="10">ほげ</textarea>
-        <button onclick="roulette()">ルーレット</button>
-        <button onclick="removeAllMember()">消去</button>
-    </div>
-    <div id="output_result">
-        <!-- <textarea name="result" id="" cols="30" rows="10"></textarea> -->
-        <textarea id="result" type="text" value="コピー対象の文言" cols="30" rows="10" readonly></textarea>
-        <button onclick="copy()">コピー</button>
+    <div id="container">
+        <h1>tiget出順ルーレット</h1>
+        <div>
+            <p>tigetの出演者一覧をコピペするだけで、出演者の出順をランダムで決めることができます。(こちらは大阪お笑い支援団体Freckles(フレクルズ)が提供しているサービスです。)</p>
+        </div>
+        <div id="input_member">
+            <h2>①tigetから出演者一覧をここにペースト</h2>
+            <textarea name="" id="member" cols="50" rows="10"></textarea>
+            <div class="buttons">
+                <button id="remove" onclick="removeAllMember()"><b>やり直し</b></button>
+                <button id="roulette" onclick="roulette()"><b>ルーレット</b></button>
+            </div>
+        </div>
+        <div id="output_result">
+            <h2>②ランダム出順結果</h2>
+            <!-- <textarea name="result" id="" cols="30" rows="10"></textarea> -->
+            <textarea id="result" type="text" value="" cols="50" rows="10" readonly></textarea>
+            <div class="buttons">
+                <button onclick="copy()"><b>コピー</b></button>
+            </div>
+        </div>
     </div>
 </body>
 
