@@ -11,12 +11,10 @@ html, body {
 #container {
     max-width: 480px;
     margin: 0px auto;
-    /* padding: 0px 100px 0px 100px; */
     background-color: #fff;
     height: 100%;
 }
 
-/* div {} */
 
 h1 {
     text-align: center;
@@ -25,6 +23,15 @@ h1 {
 
 p {
     text-align: left;
+}
+
+a {
+    color: #009CD1;
+}
+
+
+a:visited {
+    color: #009CD1;
 }
 
 textarea {
